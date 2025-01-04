@@ -1,0 +1,45 @@
+[project]
+name = "statement-aggregator"
+version = "0.1.0"
+description = "A tool to aggregate bank and insurance statements from CSV/TSV files."
+authors = [
+    { name = "TurboMAM", email = "your_email@example.com" },  # Replace with your actual email
+]
+readme = "README.md"  # You should create a README.md file in your repository
+requires-python = ">=3.8"  # Specify the minimum Python version
+dependencies = [
+    "click>=8.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/turbomam/statement-aggregator"
+"Bug Tracker" = "https://github.com/turbomam/statement-aggregator/issues"
+
+#[project.scripts]
+#statement-aggregator = "statement_aggregator:aggregate_statements"  # Assuming you saved the script as statement_aggregator.py
+#
+#[build-system]
+#requires = ["setuptools>=43.0.0", "wheel"]
+#build-backend = "setuptools.build_meta"
+#
+#[tool.setuptools]
+#py-modules = ["statement_aggregator"] # Specify the name of your Python script
+
+[tool.poetry]
+name = "statement-aggregator"
+version = "0.1.0"
+description = "A tool to aggregate bank and insurance statements from CSV/TSV files."
+authors = ["TurboMAM <your_email@example.com>"]  # Replace with your actual email
+#readme = "README.md"
+packages = [{include = "statement_aggregator.py"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+click = ">=8.0"
+
+[tool.poetry.scripts]
+statement-aggregator = "statement_aggregator:aggregate_statements"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
